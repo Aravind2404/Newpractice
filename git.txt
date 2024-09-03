@@ -1,0 +1,30 @@
+GIT -- LOCAL REPOSITORY
+
+GITHUB -- REMOTE REPOSITORY             
+
+(moving files from git to github is named as PUSH) 
+
+
+First step - need to install git from chrome
+
+second step - need to create a account in github and need to create a repository then
+
+thrid step - need to exclude the file from local so need to create a folder in any this pc anywhere then inside right click 
+git bash and command will open type GIT INIT is used for local git repository. 
+
+Fourth step - need to integrate the git and github so type the command as GIT REMOTE ADD ORIGIN "location of the github url".
+
+
+(Moving file from github to git is named as PULL)
+FIFTH STEP - need to pull the Readme file in the local repository so need to type as " GIT PULL ORIGIN MASTER"
+
+Sixth Step - for checking in D drive - folder which files did not commit till now  in command type as GIT STATUS. then we need to add the pending files into index for 
+that we need to enter command as GIT ADD "file name ". then need to commit the file into git  command as GIT COMMIT -m " own command anything just comment"  
+
+(-m is for specifying comments)
+
+Seventh step - for adding multiple files into index GIT ADD -A , and then commiting multiple files into git repository GIT COMMIT -a -m "comments"
+
+Eigth Step - need to push the code into github repository GIT PUSG ORIGIN MAIN.
+
+
