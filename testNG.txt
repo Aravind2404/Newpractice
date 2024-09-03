@@ -1,0 +1,70 @@
+package com.employermodule;
+
+import java.io.IOException;
+import java.util.Date;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.empreusable.BaseLaunch;
+
+public class Createjobalert extends BaseLaunch {
+	@BeforeClass
+	public static void chromelauncha() {
+		chromelaunch();
+		winmaximize();
+	}
+
+	@BeforeMethod
+	public static void starttime() throws IOException {
+		url(getData("jobalert", 0, 1));
+		Date d = new Date();
+		System.out.println(d);
+	}
+
+	@AfterMethod
+	public static void endttime() {
+		Date d = new Date();
+		System.out.println(d);
+	}
+
+	@AfterClass
+	public static void browserclose() {
+//		close();
+	}
+	@Test
+	public void Createjobalert() throws IOException {
+		
+		
+		for(int i=1;i<=10;i++ ) {
+			CreatejobalertPojo c = new CreatejobalertPojo();	
+		
+		btnClick(c.getLoginuibutton());
+		fillup(c.getEmailfield(), getData("jobalert", 1, i));
+		fillup(c.getPasswordfield(), getData("jobalert", 2, i));
+		impWait(20);
+		btnClick(c.getLoginsubmitbutton());
+		impWait(20);
+		btnClick(c.getCreatejobalert());
+		fillup(c.getKeyskills(), getData("jobalert", 3, i));
+		impWait(3);
+		fillup(c.getSalaryperannum(), getData("jobalert", 4, i));
+		fillup(c.getLocation(), getData("jobalert", 5, i));
+		fillup(c.getExperience(), getData("jobalert", 6, i));
+		impWait(3);
+		fillup(c.getRole(), getData("jobalert", 7, i));
+		fillup(c.getAlert(), getData("jobalert", 11, i));
+		SValue(c.getPreferredindustry(), getData("jobalert", 8, i));
+		impWait(3);
+		SValue(c.getJobtype(), getData("jobalert", 9, i));
+		fillup(c.getMobilenumber(), getData("jobalert", 10, i));
+		btnClick(c.getCreatebutton());
+		btnClick(c.getLogutmenu());
+		jClick(c.getLogoutbutton());
+
+	}
+	}
+}

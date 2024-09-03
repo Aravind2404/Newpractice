@@ -27,4 +27,4 @@ Seventh step - for adding multiple files into index GIT ADD -A , and then commit
 
 Eigth Step - need to push the code into github repository GIT PUSG ORIGIN MAIN.
 
-
+1st video got over
